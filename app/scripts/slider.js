@@ -97,9 +97,9 @@ $(() => {
         const nextSlide = () => goToSlide((state.slide + 1) % state.slides.length)
         const prevSlide = () => goToSlide((state.slide + state.slides.length - 1) % state.slides.length)
 
-        goToSlide(3)
+        goToSlide(0)
 
-        setInterval(nextSlide, 7000)
+        //setInterval(nextSlide, 7000)
 
     })
 

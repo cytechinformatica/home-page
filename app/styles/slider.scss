@@ -105,12 +105,18 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         }
     }
 
-    .btn-floating {
+    .cy-header-fab {
         position: absolute;
         bottom: -26px;
         margin: auto;
         left: 50%;
-        transform: translateX(-50%);
+        transform: translateX(-50%) scale(1.0);
+        z-index: 10;
+        transition: all 500ms $def-easing;
+
+        &.cy-hided {
+            transform: translateX(-50%) scale(0.0);
+        }
     }
 }
 
