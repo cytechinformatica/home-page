@@ -1,0 +1,77 @@
+$def-easing: cubic-bezier(0.8, 0, 0.2, 1);
+
+@for $i from 1 through 100 {
+    .cy-anim-for-#{$i * 100}ms { 
+        animation-duration: #{$i * 100}ms !important;
+    }
+}
+
+@keyframes anim-appear-from-down {
+    from {
+        opacity: 0;
+        transform: translateY(100px)
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0px)
+    }
+}
+
+.cy-anim-appear-from-down {
+    animation-name: anim-appear-from-down;
+    animation-timing-function: $def-easing;
+    animation-duration: 500ms;
+}
+
+@keyframes anim-appear-from-down-and-hide {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(1)
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0px) scale(1)
+    }
+
+    100% {
+        opacity: .5;
+        transform: translateY(0px) scale(.6)
+    }
+}
+
+@keyframes anim-appear-from-down-and-keep {
+    0% {
+        opacity: 0;
+        transform: translateY(100px) scale(1)
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(0px) scale(1)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px) scale(1)
+    }
+}
+
+.cy-anim-appear-from-down-and-keep {
+    animation-name: anim-appear-from-down-and-keep;
+    animation-timing-function: $def-easing;
+    animation-duration: 500ms;
+
+    opacity: 1;
+    transform: translateY(0px) scale(1)
+}
+
+.cy-anim-appear-from-down-and-hide {
+    animation-name: anim-appear-from-down-and-hide;
+    animation-timing-function: $def-easing;
+    animation-duration: 500ms;
+
+    opacity: .5;
+    transform: translateY(0px) scale(.6)
+}

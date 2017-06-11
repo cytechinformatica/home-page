@@ -1,0 +1,65 @@
+$def-imac-size: 360;
+
+$def-imac-device-size: #{$def-imac-size}px;
+$def-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+$def-easing: cubic-bezier(0.8, 0, 0.2, 1);
+
+.cy-device-imac {
+    position: relative;
+    width: $def-imac-device-size;
+    height: $def-imac-device-size;
+
+    .cy-device-imac-screen {
+        position: absolute;
+        top: 12%;
+        bottom: 22%;
+        left: 0;
+        right: 0;
+        border-radius: #{$def-imac-size * .03}px;
+        box-shadow: $def-box-shadow;
+        z-index: 2;
+        overflow: hidden;
+
+        .cy-device-imac-innerscreen {
+            position: absolute;
+            top: 0;
+            bottom: 15%;
+            left: 0;
+            right: 0;
+            box-shadow: $def-box-shadow;
+            z-index: 2;
+
+            .cy-device-imac-innerinnerscreen {
+                position: absolute;
+                top: 10%;
+                bottom: 10%;
+                left: 5%;
+                right: 5%;
+                box-shadow: $def-box-shadow;
+                z-index: 2;
+                display: none;
+            }
+        }
+    }
+
+    .cy-device-imac-support-1 {
+        position: absolute;
+        top: 12%;
+        bottom: 12%;
+        left: 40%;
+        right: 40%;
+        box-shadow: $def-box-shadow;
+        z-index: 1;
+    }
+
+    .cy-device-imac-support-2 {
+        position: absolute;
+        top: 85%;
+        bottom: 12%;
+        left: 35%;
+        right: 35%;
+        box-shadow: $def-box-shadow;
+        border-radius: #{$def-imac-size * .01}px;
+        z-index: 2;
+    }
+}

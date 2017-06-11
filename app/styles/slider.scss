@@ -1,0 +1,126 @@
+
+$def-height: calc(100vh - 52px);
+$def-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
+$def-easing: cubic-bezier(0.8, 0, 0.2, 1);
+
+.cy-slider {
+    position: relative;
+    height: $def-height;
+    transition: all 2s $def-easing;
+    background-color: #1A237E;
+
+    .cy-slider-circle-wrapper {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        overflow: hidden;
+    }
+
+    .cy-slider-circle {
+        position: absolute;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, .03);
+        z-index: 0;
+        transition: all 2s linear;
+
+        animation-name: slide-appear-scalling;
+        animation-delay: 0ms;
+        animation-timing-function: $def-easing;
+        animation-duration: 1000ms;
+        z-index: 0;
+
+        @for $i from 1 through 10 {
+            &.cy-slider-circle-#{$i} { 
+                animation-duration: #{$i * 200 + 1000}ms;
+                transition: all #{$i * .2 + .8}s $def-easing;
+            }
+        }
+    }
+
+    .cy-slider-markers {
+        position: absolute;
+        top: 0;
+        left: 0; right: 0;
+        height: 32px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 10;
+
+        .cy-slider-marker {
+            width: 15px;
+            height: 15px;
+            background-color: #FFF;
+            margin: 5px;
+            border-radius: 50%;
+            transition: all .2s $def-easing;
+
+            &.cy-active, &:hover {
+                transform: scale(1.6);
+                cursor: pointer;
+            }
+
+            &:hover {
+                background-color: #DDD;
+            }
+        }
+    }
+
+    .cy-slide {
+        position: relative;
+        height: $def-height;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-around;
+        z-index: 5;
+
+        @for $i from 1 through 12 {
+            .cy-slide-content-#{$i} { 
+                flex: $i; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+            }
+        }
+
+        @for $i from 1 through 12 {
+            .cy-slide-content-horizontal-#{$i} { 
+                flex: $i; 
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: row;
+
+            }
+        }
+
+        .cy-slide-strong-text {
+            font-size: 32px;
+            font-weight: 900;
+            margin: 0 80px !important;
+            text-transform: uppercase;
+        }
+    }
+
+    .btn-floating {
+        position: absolute;
+        bottom: -26px;
+        margin: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes slide-appear-scalling {
+    from {
+        background: rgba(255, 255, 255, .00);
+        transform: scale(0.0);
+    }
+    to {
+        background: rgba(255, 255, 255, .03);
+        transform: scale(1.0);
+    }
+}
