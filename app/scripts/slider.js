@@ -37,9 +37,17 @@ $(() => {
          * Setup waves
          */
 
-        const setSlide = (slide) => {
-            state.slides.map(s => s.remove())
-            slider.append(slide)
+        const setSlide = (slide, oldSlide, callBack) => {
+            if(oldSlide) {
+                oldSlide.fadeOut('fast', () => {
+                    oldSlide.remove()
+                    slider.append(slide)
+                    callBack(slide)
+                })
+            } else {
+                slider.append(slide)
+                callBack(slide)
+            }
         }
 
         const updateMarkers = (index) => {
@@ -84,13 +92,15 @@ $(() => {
 
         const goToSlide = (index = 0) => {
             if(state.slides.length > 0) {
+                const oldSlide = state.slides[state.slide]
                 state.slide = index
                 const slide = state.slides[index]
 
-                setSlide(slide)
-                updateMarkers(index)
-                updateWaves(slide)
-                updateColor(slide)
+                setSlide(slide, oldSlide, () => {
+                    updateMarkers(index)
+                    updateWaves(slide)
+                    updateColor(slide)
+                })
             }
         }
 
