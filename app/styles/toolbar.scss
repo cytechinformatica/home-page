@@ -16,11 +16,13 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     display: flex;
     flex-direction: row;
     align-items: center;
+    overflow: hidden;
 
-    .cy-toolbar-active-circle-1 {
+    .cy-toolbar-active-circle {
         position: absolute;
-        background-color: rgba(0, 0, 0, .1);
+        background-color: rgba(0, 0, 0, .08);
         border-radius: 50%;
+        z-index: 0;
     }
 
     .cy-toolbar-cool-icons {
@@ -29,6 +31,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         justify-content: space-around;
         width: 100%;
         transition: all 300ms $def-easing;
+        z-index: 1;
 
         .cy-toolbar-cool-icon {
             display: flex;
@@ -40,7 +43,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
                 font-size: 24px;
             }
 
-            h4 {
+            span {
                 font-size: 12px;
                 font-weight: 700;
                 margin: 0;
