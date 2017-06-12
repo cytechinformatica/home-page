@@ -42,10 +42,12 @@ $(() => {
                 oldSlide.fadeOut('fast', () => {
                     oldSlide.remove()
                     slider.append(slide)
+                    slide.fadeIn()
                     callBack(slide)
                 })
             } else {
                 slider.append(slide)
+                slide.fadeIn()
                 callBack(slide)
             }
         }
@@ -62,7 +64,7 @@ $(() => {
 
             const proportion = 1.618
             const count = 2
-            let size = Math.min(centerEl.width(), $(window).width() / 4)
+            let size = Math.min(centerEl.height(), $(window).width() / 4)
 
             for (let i = 0; i < count; i++) {
                 size = size * proportion

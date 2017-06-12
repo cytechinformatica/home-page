@@ -20,8 +20,21 @@ $(() => {
 
         const factor = (80 - Math.min(windowScroll, 80))
         toolbarComponent.css({ height: 80 + factor })
-
-        console.log(windowScroll)
     })
+
+    
+    /**
+     * MENUS
+     */
+
+    const circleTemplate = index => 
+        (`<div id="cy-toolbar-active-circle-${index}" class="cy-toolbar-active-circle-${index}"></div>`)
+    
+    const state = {
+        menu: -1,
+        menus: [],
+    }
+
+     $('.cy-toolbar-menu').each((_, el) => state.menus.push($(el)))
 
 })

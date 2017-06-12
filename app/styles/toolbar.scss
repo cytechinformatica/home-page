@@ -17,11 +17,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     flex-direction: row;
     align-items: center;
 
-    // transition: all 200ms $def-easing;
-
-    &.cy-toolbar-expanded {
-        height: $def-toolbar-expanded-height;
-        position: relative;
+    .cy-toolbar-active-circle-1 {
+        position: absolute;
+        background-color: rgba(0, 0, 0, .1);
+        border-radius: 50%;
     }
 
     .cy-toolbar-cool-icons {
@@ -38,15 +37,22 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
             flex-direction: column;
 
             i {
-                font-size: 32px;
+                font-size: 24px;
             }
 
             h4 {
-                font-size: 16px;
+                font-size: 12px;
+                font-weight: 700;
                 margin: 0;
+                text-transform: uppercase;
             }
         }
 
+    }
+
+    &.cy-toolbar-expanded {
+        height: $def-toolbar-expanded-height;
+        position: relative;
     }
 
 }

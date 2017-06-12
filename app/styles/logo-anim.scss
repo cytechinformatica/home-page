@@ -1,4 +1,4 @@
-$def-size: 192;
+$def-size: 150;
 
 $def-icon-size: #{$def-size}px;
 $def-unit-size: #{$def-size / 48}px;
@@ -122,8 +122,8 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     
 	.cy-logo-circle-4 {
 		position: absolute;
-		width: 176px;
-		height: 176px;
+		width: calc(#{$def-icon-size} - #{$def-unit-size} * 4);
+		height: calc(#{$def-icon-size} - #{$def-unit-size} * 4);
 		border-radius: 50%;
 		background: linear-gradient(135deg, hsla(0, 0%, 100%, 0.1), hsla(0, 0%, 100%, 0));
 		animation-name: appear-scalling;

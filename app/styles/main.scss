@@ -9,3 +9,25 @@
 @import 'section.scss';
 
 body { margin: 0; padding: 0; }
+
+.cy-header-devices {
+    position: relative;
+
+    .cy-device-tablet, .cy-device-phone {
+        position: absolute;
+    }
+
+    .cy-device-imac {
+        margin-left: -10%;
+    }
+
+    .cy-device-tablet {
+        top: 30%;
+        left: 60%;
+    }
+
+    .cy-device-phone {
+        top: 31%;
+        left: -30%;
+    }
+}

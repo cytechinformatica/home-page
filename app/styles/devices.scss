@@ -2,6 +2,8 @@ $def-imac-size: 360;
 $def-imac-device-size: #{$def-imac-size}px;
 $def-tablet-size: $def-imac-size * .7;
 $def-tablet-device-size: #{$def-tablet-size}px;
+$def-phone-size: $def-imac-size * .6;
+$def-phone-device-size: #{$def-phone-size}px;
 
 $def-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
@@ -11,7 +13,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     width: $def-imac-device-size;
     height: $def-imac-device-size;
 
-    .cy-device-imac-button {
+    .cy-device-button {
         position: absolute;
         border-radius: 50%;
         background-color: rgba(0, 0, 0, .2);
@@ -23,7 +25,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         z-index: 11;
     }
 
-    .cy-device-imac-screen {
+    .cy-device-screen {
         position: absolute;
         top: 12%;
         bottom: 22%;
@@ -34,7 +36,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         z-index: 10;
         overflow: hidden;
 
-        .cy-device-imac-innerscreen {
+        .cy-device-innerscreen {
             position: absolute;
             top: 0;
             bottom: 15%;
@@ -42,10 +44,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
             right: 0;
             z-index: 2;
 
-            .cy-device-imac-camera {
+            .cy-device-camera {
                 position: absolute;
                 border-radius: 50%;
-                background-color: rgba(255, 255, 255, .1);
+                background-color: rgba(255, 255, 255, .2);
                 width: #{$def-imac-size * .02}px;
                 height: #{$def-imac-size * .02}px;
                 top: 4%;
@@ -53,13 +55,12 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
                 transform: translateX(-50%);
             }
 
-            .cy-device-imac-innerinnerscreen {
+            .cy-device-innerinnerscreen {
                 position: absolute;
                 top: 10%;
                 bottom: 10%;
                 left: 5%;
                 right: 5%;
-                box-shadow: $def-box-shadow;
                 z-index: 2;
                 overflow: hidden;
                 display: flex;
@@ -69,7 +70,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         }
     }
 
-    .cy-device-imac-extra-1 {
+    .cy-device-extra-1 {
         position: absolute;
         top: 12%;
         bottom: 12%;
@@ -80,7 +81,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         transform: skewX(10deg)
     }
 
-    .cy-device-imac-extra-2 {
+    .cy-device-extra-2 {
         position: absolute;
         top: 12%;
         bottom: 12%;
@@ -91,7 +92,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         transform: skewX(-10deg)
     }
 
-    .cy-device-imac-extra-3 {
+    .cy-device-extra-3 {
         position: absolute;
         top: 12%;
         bottom: 12%;
@@ -107,10 +108,22 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     width: $def-tablet-device-size;
     height: $def-tablet-device-size;
 
-    .cy-device-tablet-screen {
+    .cy-device-button {
+        position: absolute;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .3);
+        width: #{$def-tablet-size * .04}px;
+        height: #{$def-tablet-size * .04}px;
+        bottom: 14.8%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
+    }
+
+    .cy-device-screen {
         position: absolute;
         top: 12%;
-        bottom: 22%;
+        bottom: 12%;
         left: 0;
         right: 0;
         border-radius: #{$def-tablet-size * .03}px;
@@ -118,21 +131,41 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         z-index: 10;
         overflow: hidden;
 
-        .cy-device-tablet-innerscreen {
+        .cy-device-innerscreen {
             position: absolute;
             top: 0;
-            bottom: 15%;
+            bottom: 0;
             left: 0;
             right: 0;
             z-index: 2;
 
-            .cy-device-tablet-innerinnerscreen {
+            .cy-device-camera {
                 position: absolute;
-                top: 10%;
-                bottom: 10%;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, .3);
+                width: #{$def-tablet-size * .015}px;
+                height: #{$def-tablet-size * .015}px;
+                top: 5.2%;
+                right: 10%;
+            }
+
+            .cy-device-soundbox {
+                position: absolute;
+                border-radius: #{$def-tablet-size * .015 / 2}px;
+                background-color: rgba(255, 255, 255, .3);
+                width: #{$def-tablet-size * .1}px;
+                height: #{$def-tablet-size * .01}px;
+                top: 5.2%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .cy-device-innerinnerscreen {
+                position: absolute;
+                top: 13%;
+                bottom: 13%;
                 left: 5%;
                 right: 5%;
-                box-shadow: $def-box-shadow;
                 z-index: 2;
                 overflow: hidden;
                 display: flex;
@@ -142,34 +175,101 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         }
     }
 
-    .cy-device-tablet-extra-1 {
-        position: absolute;
-        top: 12%;
-        bottom: 12%;
-        left: 40%;
-        right: 45%;
-        box-shadow: $def-box-shadow;
-        z-index: 1;
-        transform: skewX(10deg)
+    .cy-device-extra-1 {
+        display: none;
     }
 
-    .cy-device-tablet-extra-2 {
-        position: absolute;
-        top: 12%;
-        bottom: 12%;
-        left: 45%;
-        right: 40%;
-        box-shadow: $def-box-shadow;
-        z-index: 1;
-        transform: skewX(-10deg)
+    .cy-device-extra-2 {
+        display: none;
     }
 
-    .cy-device-tablet-extra-3 {
+    .cy-device-extra-3 {
+        display: none;
+    }
+}
+
+
+.cy-device-phone {
+    position: relative;
+    width: $def-phone-device-size;
+    height: $def-phone-device-size;
+
+    .cy-device-button {
         position: absolute;
-        top: 12%;
-        bottom: 12%;
-        left: 40%;
-        right: 40%;
-        z-index: 2;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, .3);
+        width: #{$def-phone-size * .048}px;
+        height: #{$def-phone-size * .048}px;
+        bottom: 4.4%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 11;
+    }
+
+    .cy-device-screen {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 25%;
+        right: 25%;
+        border-radius: #{$def-phone-size * .03}px;
+        box-shadow: $def-box-shadow;
+        z-index: 10;
+        overflow: hidden;
+
+        .cy-device-innerscreen {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            z-index: 2;
+
+            .cy-device-camera {
+                position: absolute;
+                border-radius: 50%;
+                background-color: rgba(255, 255, 255, .3);
+                width: #{$def-phone-size * .015}px;
+                height: #{$def-phone-size * .015}px;
+                top: 5.2%;
+                right: 10%;
+            }
+
+            .cy-device-soundbox {
+                position: absolute;
+                border-radius: #{$def-phone-size * .015 / 2}px;
+                background-color: rgba(255, 255, 255, .3);
+                width: #{$def-phone-size * .1}px;
+                height: #{$def-phone-size * .01}px;
+                top: 5.2%;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .cy-device-innerinnerscreen {
+                position: absolute;
+                top: 13%;
+                bottom: 13%;
+                left: 5%;
+                right: 5%;
+                z-index: 2;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    }
+
+    .cy-device-extra-1 {
+        display: none;
+    }
+
+    .cy-device-extra-2 {
+        display: none;
+    }
+
+    .cy-device-extra-3 {
+        display: none;
     }
 }
