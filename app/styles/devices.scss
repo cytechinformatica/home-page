@@ -1,4 +1,4 @@
-$def-imac-size: 360;
+$def-imac-size: 400;
 $def-imac-device-size: #{$def-imac-size}px;
 $def-tablet-size: $def-imac-size * .7;
 $def-tablet-device-size: #{$def-tablet-size}px;
@@ -12,6 +12,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     position: relative;
     width: $def-imac-device-size;
     height: $def-imac-device-size;
+
+    &, & * {
+        transition: all .5s $def-easing;
+    }
 
     .cy-device-button {
         position: absolute;
@@ -40,9 +44,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
             position: absolute;
             top: 0;
             bottom: 15%;
-            left: 0;
-            right: 0;
+            left: -2%;
+            right: -2%;
             z-index: 2;
+            transition: all .5s $def-easing;
 
             .cy-device-camera {
                 position: absolute;
@@ -78,7 +83,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         right: 45%;
         box-shadow: $def-box-shadow;
         z-index: 1;
-        transform: skewX(10deg)
+        transform: scale(1) skewX(10deg);
     }
 
     .cy-device-extra-2 {
@@ -89,7 +94,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         right: 40%;
         box-shadow: $def-box-shadow;
         z-index: 1;
-        transform: skewX(-10deg)
+        transform: scale(1) skewX(-10deg);
     }
 
     .cy-device-extra-3 {
@@ -99,6 +104,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         left: 40%;
         right: 40%;
         z-index: 2;
+        transform: scale(1) skewX(0deg);
     }
 }
 
@@ -107,6 +113,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     position: relative;
     width: $def-tablet-device-size;
     height: $def-tablet-device-size;
+
+    &, & * {
+        transition: all .5s $def-easing;
+    }
 
     .cy-device-button {
         position: absolute;
@@ -124,12 +134,14 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         position: absolute;
         top: 12%;
         bottom: 12%;
-        left: 0;
-        right: 0;
+        left: -2%;
+        right: -2%;
         border-radius: #{$def-tablet-size * .03}px;
         box-shadow: $def-box-shadow;
         z-index: 10;
         overflow: hidden;
+        transition: all .5s $def-easing;
+        background-color: #000;
 
         .cy-device-innerscreen {
             position: absolute;
@@ -176,15 +188,15 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     }
 
     .cy-device-extra-1 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 
     .cy-device-extra-2 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 
     .cy-device-extra-3 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 }
 
@@ -193,6 +205,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     position: relative;
     width: $def-phone-device-size;
     height: $def-phone-device-size;
+
+    &, & * {
+        transition: all .5s $def-easing;
+    }
 
     .cy-device-button {
         position: absolute;
@@ -216,6 +232,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         box-shadow: $def-box-shadow;
         z-index: 10;
         overflow: hidden;
+        background-color: #000;
 
         .cy-device-innerscreen {
             position: absolute;
@@ -224,6 +241,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
             left: 0;
             right: 0;
             z-index: 2;
+            transition: all .5s $def-easing;
 
             .cy-device-camera {
                 position: absolute;
@@ -262,14 +280,14 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     }
 
     .cy-device-extra-1 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 
     .cy-device-extra-2 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 
     .cy-device-extra-3 {
-        display: none;
+        transform: scale(0.0) skewX(-10deg);
     }
 }

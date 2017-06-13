@@ -27,7 +27,7 @@ $(() => {
         slider.append(() => (
             `<div class="cy-slider-markers">${
                 state.slides.map((s, i) => (`<div class="cy-slider-marker" data-slide="${i}"></div>`))
-            }</div>`
+            }</div>`.replace(/,/g, '')
         ))
         slider.find('.cy-slider-marker').click((el) => {
             goToSlide($(el.target).data('slide'))
@@ -58,7 +58,14 @@ $(() => {
         }
 
         const updateWaves = (slide) => {
-            const centerEl = slide.find('.cy-slide-waves-center')
+            let centerEl = slide.find('.cy-slide-waves-center')
+            for(let i = 0; i < centerEl.length; i++) {
+                const el = $(centerEl[i])
+                if(el.css('display') !== 'none') {
+                    centerEl = el
+                    break
+                }
+            }
             const pos = centerEl.position()
             const center = { left: pos.left + centerEl.width() / 2, top: pos.top + centerEl.height() / 2 }
 
