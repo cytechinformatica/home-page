@@ -1,0 +1,94 @@
+@import 'global';
+
+$def-easing: cubic-bezier(0.8, 0, 0.2, 1);
+
+.cy-cool-grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+    @include responsive(
+        padding, 20px 0, 20px 20px, 30px 30px
+    );
+
+    .cy-cool-grid-title {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .cy-cool-grid-tile-background {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        top: 0; bottom: 0;
+        left: 0; right: 0;
+    }
+
+    .cy-cool-grid-tile {
+        position: relative;
+        @include responsive(
+            width, calc(100% - 5px), calc(33.33333% - 10px), calc(25% - 20px)
+        );        
+        height: 300px;
+        overflow: hidden;
+
+        @include responsive(
+            margin, 2px, 5px, 10px
+        );
+
+        img {
+            height: 100%;
+            width: auto;
+        }
+
+        .cy-cool-grid-tile-overlay {
+            position: absolute;
+            top: 0; bottom: 0;
+            left: 0; right: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: column;
+            padding: 20px;
+            transition: all 150ms linear;
+            transform: scale(1.2);
+            opacity: 0;
+
+            &:hover {
+                background-color: rgba(0, 0, 0, .8);
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            h1 {
+                font-size: 20px;
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+            p {
+                font-size: 14px;
+                font-weight: 400;
+            }
+
+            h1, p {
+                height: auto;
+                width: 100%;
+                color: white;
+                text-align: center;
+            }
+        }
+
+    }
+
+    .cy-cool-grid-tile-2 {
+        @include responsive(
+            width, calc(100% - 5px), calc(66.66666% - 10px), calc(50% - 20px)
+        );        
+    }
+
+}
