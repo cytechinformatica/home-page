@@ -11,6 +11,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 .cy-device-wrapper {
     width: $def-imac-device-size;
     height: $def-imac-device-size;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cy-device-imac {

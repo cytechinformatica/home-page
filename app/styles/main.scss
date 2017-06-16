@@ -57,7 +57,9 @@ body {
     }
 
     .cy-section-group-1 {
-        
+        @include responsive(
+            padding-right, 0, 40%, 40%
+        );
     }
 
     img {

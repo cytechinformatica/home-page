@@ -63,7 +63,7 @@ const __PORT_ITEMS = [
 $(() => {
     const portfolioItemsElement = $('.cy-cool-grid')
     const portfolioItemTemplate = (item, i) => `
-        <a href="${item.link ? item.link : ''}" class="cy-cool-grid-tile cy-cool-grid-tile-${item.size}" ${item.image ? `data-image="${item.image}"` : '' }>
+        <a ${item.link ? `href="${item.link}" target="_blank"` : ''} class="cy-cool-grid-tile cy-cool-grid-tile-${item.size}" ${item.image ? `data-image="${item.image}"` : '' }>
             <div class="cy-cool-grid-tile-background">
                 ${item.imageHTML ? item.imageHTML : ''}
             </div>
