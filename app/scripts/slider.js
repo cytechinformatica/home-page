@@ -71,7 +71,7 @@ $(() => {
 
             const proportion = 1.618
             const count = 2
-            let size = Math.min(centerEl.height(), $(window).width() / 4)
+            let size = Math.min(centerEl.height(), $(window).width() / 3)
 
             for (let i = 0; i < count; i++) {
                 size = size * proportion

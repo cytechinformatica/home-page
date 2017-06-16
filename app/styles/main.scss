@@ -48,3 +48,25 @@ body {
 #sidenav-overlay {
     z-index: 3999; 
 }
+
+#cy-section-about {
+    overflow: hidden;
+    & > div {
+        position: relative;
+        z-index: 10;
+    }
+
+    .cy-section-group-1 {
+        padding-right: 40%;
+    }
+
+    img {
+        position: absolute;
+        z-index: 0;
+        bottom: 0;
+        right: 0;
+        @include responsive(
+            width, 240px, 400px, 600px
+        );
+    }
+}

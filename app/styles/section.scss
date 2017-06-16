@@ -5,9 +5,14 @@ $def-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3
 $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 
 .cy-section {
-    min-height: $def-height;
+    position: relative;
+
     @include responsive(
-        padding, 0 10px, 0 20px, 0 40px
+        min-height, auto, $def-height, $def-height
+    );
+    
+    @include responsive(
+        padding, 40px 10px, 40px 20px, 40px 40px 
     );
 
     .cy-section-group {
@@ -26,8 +31,9 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 
             img {
                 @include responsive(
-                    width, 192px, 220px, 300px
-                )
+                    width, 220px, 220px, 360px
+                );
+                margin: 20px;
             }
         }
     }
@@ -46,6 +52,10 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     .cy-gravity-bottom {
         align-items: flex-end;
         justify-content: flex-end;
+    }
+
+    .cy-gravity-left {
+        align-items: flex-start;
     }
 
     .cy-section-title {
@@ -81,4 +91,4 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         font-size, 8px, 12px, 16px 
     );
     font-weight: 300;
-}
+} 
