@@ -109,6 +109,7 @@ $(() => {
                     updateMarkers(index)
                     updateWaves(slide)
                     updateColor(slide)
+                    window.__updateTranslation? window.__updateTranslation() : false
                 })
             }
         }
@@ -118,7 +119,7 @@ $(() => {
 
         goToSlide(0)
 
-        //setInterval(nextSlide, 7000)
+        // setInterval(nextSlide, 4000)
 
     })
 

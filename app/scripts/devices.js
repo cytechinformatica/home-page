@@ -7,7 +7,7 @@ $(() => {
         setInterval(() => {
             el.removeClass(`cy-device-${devices[index % devices.length]}`)
             el.addClass(`cy-device-${devices[++index % devices.length]}`)
-        }, 3500)
+        }, 2000)
 
     })
 

@@ -1,5 +1,7 @@
 $(() => {
 
+    if($(window).width() < 993) return; 
+
     const toolbarComponent = $('.cy-toolbar')
     const headerFabComponent = $('.cy-header-fab')
     const firstSectionComponent = $('.1st-section')

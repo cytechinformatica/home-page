@@ -27,12 +27,13 @@ $(() => {
             const i18n = new locale.i18n(l);
             const __ = i18n.__;
 
-            $('[translate]').each((_, el) => {
-                $(el).attr('data-translation', __($(el).text()))
-                $(el).text(__($(el).text()))
-            })
-
-            window._cy_i18n = i18n
+            window.__updateTranslation = () => {
+                $('[translate]').each((_, el) => {
+                    $(el).attr('data-translation', __($(el).text()))
+                    $(el).text(__($(el).text()))
+                })
+            }
+            window.__updateTranslation? window.__updateTranslation() : false
         }
     })
 })

@@ -144,9 +144,9 @@
 						<span class="cy-logo-y-letter">Y</span>
 					</div>			
 					<div class="cy-slide-waves-center">
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_1_text_1</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_1_text_2</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2600ms">slide_1_text_3</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_1_text_1</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_1_text_2</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2600ms">slide_1_text_3</h1>
 					</div>
 				</div>
 			</div>
@@ -154,9 +154,9 @@
 			<div class="cy-slide" data-color="#4A148C">
 				<div class="cy-slide-content-horizontal-1">
 					<div class="cy-slide-waves-center center-align">
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_2_text_1</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_2_text_2</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2600ms">slide_2_text_3</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_2_text_1</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_2_text_2</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2600ms">slide_2_text_3</h1>
 					</div>
 				</div>
 			</div>
@@ -167,15 +167,15 @@
 				</div>
 				<div class="cy-slide-content-horizontal-1">
 					<div class="center-align cy-slide-waves-center">
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_3_text_1</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_3_text_2</h1>
-						<h1 class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_3_text_3</h1>
-						<a class="cy-slide-btn btn btn-large blue accent-2 cy-anim-appear-from-down cy-anim-for-2600ms" href="#contact">contact_us_btn</a>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2000ms">slide_3_text_1</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_3_text_2</h1>
+						<h1 translate class="white-text cy-slide-strong-text cy-anim-appear-from-down cy-anim-for-2300ms">slide_3_text_3</h1>
+						<a translate class="cy-slide-btn btn btn-large blue accent-2 cy-anim-appear-from-down cy-anim-for-2600ms" href="#contact">contact_us_btn</a>
 					</div>
 				</div>
 			</div>
 
-			<a href="#cy-section-web" class="cy-header-fab btn-large btn-floating waves-effect white">
+			<a href="#cy-section-web" class="cy-header-fab btn-large btn-floating waves-effect white hide-on-med-and-down">
 				<i class="material-icons indigo-text">keyboard_arrow_down</i>
 			</a>
 		</div>
@@ -185,48 +185,61 @@
 
 		<!-- CYTECH TOOLBAR -->
 		<div class="cy-toolbar cy-toolbar-expanded white z-depth-1">
+			<a 
+				href="#" 
+				data-activates="slide-out" 
+				class="button-collapse btn-floating white waves-effect z-depth-0 hide-on-large-only">
+
+				<i class="material-icons grey-text darken-3">menu</i>
+			</a>
 
 			<div class="cy-toolbar-cool-icons">
-				<a href="#cy-section-web" class="cy-toolbar-cool-icon cy-toolbar-menu 1">
+				<a href="#cy-section-web" class="cy-toolbar-cool-icon cy-toolbar-menu hide-on-med-and-down">
 					<i class="mdi mdi-web blue-grey-text"></i>
-					<span translate class="blue-grey-text">menu_web</span>
+					<span translate class="blue-grey-text truncate">menu_web</span>
 				</a>
 
-				<a href="#cy-section-mobile" class="cy-toolbar-cool-icon cy-toolbar-menu 2">
+				<a href="#cy-section-mobile" class="cy-toolbar-cool-icon cy-toolbar-menu hide-on-med-and-down">
 					<i class="mdi mdi-cellphone blue-text"></i>
-					<span translate class="blue-text">menu_mobile</span>
+					<span translate class="blue-text truncate">menu_mobile</span>
 				</a>
 
-				<a href="#cy-section-visual" class="cy-toolbar-cool-icon cy-toolbar-menu 3">
+				<a href="#cy-section-visual" class="cy-toolbar-cool-icon cy-toolbar-menu hide-on-med-and-down">
 					<i class="mdi mdi-palette teal-text"></i>
-					<span translate class="teal-text">menu_visual</span>
+					<span translate class="teal-text truncate">menu_visual</span>
 				</a>
 
-				<a href="#cy-section-hibrid" class="cy-toolbar-cool-icon cy-toolbar-menu 4">
+				<a href="#cy-section-hibrid" class="cy-toolbar-cool-icon cy-toolbar-menu hide-on-med-and-down">
 					<i class="mdi mdi-responsive pink-text"></i>
-					<span translate class="pink-text">menu_hibrid</span>
+					<span translate class="pink-text truncate">menu_hibrid</span>
 				</a>
 
-				<a href="#cy-section-seo" class="cy-toolbar-cool-icon cy-toolbar-menu 5">
+				<a href="#cy-section-seo" class="cy-toolbar-cool-icon cy-toolbar-menu hide-on-med-and-down">
 					<i class="mdi mdi-search-web green-text"></i>
-					<span translate class="green-text">menu_seo</span>
+					<span translate class="green-text truncate">menu_seo</span>
 				</a>
 
 				<a href="#cy-section-portfolio" class="cy-toolbar-cool-icon cy-toolbar-menu 5">
 					<i class="mdi mdi-view-grid blue-grey-text text-darken-4"></i>
-					<span translate class="blue-grey-text text-darken-4">menu_portfolio</span>
+					<span translate class="blue-grey-text text-darken-4 truncate">menu_portfolio</span>
 				</a>
 
 				<a href="#cy-section-about" class="cy-toolbar-cool-icon cy-toolbar-menu 5">
 					<i class="mdi mdi-information blue-text"></i>
-					<span translate class="blue-text">menu_about</span>
+					<span translate class="blue-text truncate">menu_about</span>
 				</a>
 			</div>
 		</div>
 		<!-- END - CYTECH TOOLBAR -->
 
+		<!-- CYTECH SIDENAV -->
+		<ul id="slide-out" class="side-nav"></ul>
+  		<!-- END - CYTECH SIDENAV -->
+
+
+
 		<div id="cy-section-web" class="cy-section scrollspy blue-grey darken-4 cy-stretch-wrapper 1st-section">
-			<div class="cy-section-group-1 hide-on-small-only">
+			<div class="cy-section-group-1">
 				<img src="images/web.png" width="240" alt="section web">
 			</div>
 
@@ -249,21 +262,21 @@
 					<button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#mobile-text" data-expanded-text="see_less_btn">see_more_btn</button>						
 				</div>
 			</div>
-			<div class="cy-section-group-1 hide-on-small-only">
+			<div class="cy-section-group-1">
 				<img src="images/mobile.png" width="400" alt="section mobile">
 			</div>
 		</div>
 
 		<div id="cy-section-visual" class="cy-section scrollspy teal darken-1 cy-stretch-wrapper">
-			<div class="cy-section-group-1 hide-on-small-only">
+			<div class="cy-section-group-1">
 				<img src="images/visual.png" width="400" alt="section mobile">
 			</div>
 			<div class="cy-section-group-1">
 				<div>
 					<h1 translate class="cy-section-title white-text">section_visual_title</h1>
 					<p translate class="cy-section-text white-text">section_visual_text</p>
-					<div id="visual-text" class="cy-section-extra-text"><p translate class="cy-section-text white-text">section_visual_extra_text</p></div>
-					<button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#visual-text" data-expanded-text="see_less_btn">see_more_btn</button>						
+					<!-- div id="visual-text" class="cy-section-extra-text"><p translate class="cy-section-text white-text">section_visual_extra_text</p></div -->
+					<!-- button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#visual-text" data-expanded-text="see_less_btn">see_more_btn</button -->
 				</div>
 			</div>
 		</div>
@@ -273,12 +286,12 @@
 				<div>
 					<h1 translate class="cy-section-title white-text">section_hibrid_title</h1>
 					<p translate class="cy-section-text white-text">section_hibrid_text</p>
-					<div id="hibrid-text" class="cy-section-extra-text"><p translate class="cy-section-text white-text">section_hibrid_extra_text</p></div>
-					<button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#hibrid-text" data-expanded-text="see_less_btn">see_more_btn</button>						
+					<!-- div id="hibrid-text" class="cy-section-extra-text"><p translate class="cy-section-text white-text">section_hibrid_extra_text</p></div -->
+					<!-- button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#hibrid-text" data-expanded-text="see_less_btn">see_more_btn</button -->
 				</div>
 			</div>
-			<div class="cy-section-group-1 hide-on-small-only">
-				<div>
+			<div class="cy-section-group-1">
+				<div class="devices-wrapper">
 					<!-- CYTECH DEVICE IMAC -->
 					<div class="cy-device-imac cy-device-auto-change">
 
@@ -307,7 +320,7 @@
 		</div>
 
 		<div id="cy-section-seo" class="cy-section scrollspy green darken-1 cy-stretch-wrapper">
-			<div class="cy-section-group-1 hide-on-small-only">
+			<div class="cy-section-group-1">
 				<img src="images/seo.png" width="400" alt="section seo">
 			</div>
 
@@ -333,13 +346,13 @@
 				<div>
 					<h1 translate class="cy-section-title blue-grey-text">section_about_title</h1>
 					<p translate class="cy-section-text blue-grey-text">section_about_text</p>
-					<div id="about-text" class="cy-section-extra-text"><p translate class="cy-section-text blue-grey-text">section_about_extra_text</p></div>
-					<button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#about-text" data-expanded-text="see_less_btn">see_more_btn</button>						
+					<!-- div id="about-text" class="cy-section-extra-text"><p translate class="cy-section-text blue-grey-text">section_about_extra_text</p></div -->
+					<!-- button translate class="cy-btn-toggle-text btn blue waves-effect" data-to-expand="#about-text" data-expanded-text="see_less_btn">see_more_btn</button -->
 				</div>
 			</div>
 
-			<div class="cy-section-group-1 hide-on-small-only cy-gravity-bottom">
-				<img src="images/coffee.png" width="600" alt="section seo">
+			<div class="cy-section-group-1 cy-gravity-bottom">
+				<img src="images/coffee.png" width="500" alt="section seo">
 			</div>
 		</div>
 

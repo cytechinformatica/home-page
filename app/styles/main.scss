@@ -10,7 +10,10 @@
 @import 'cool-grid.scss';
 @import 'izotx-loading.scss';
 
-body { margin: 0; padding: 0; }
+body { 
+    margin: 0; padding: 0; 
+    
+}
 
 .cy-header-devices {
     position: relative;
@@ -35,4 +38,13 @@ body { margin: 0; padding: 0; }
         left: -30%;
         z-index: 3;
     }
+}
+
+.side-nav {
+    z-index: 4000;
+    position: fixed;
+}
+
+#sidenav-overlay {
+    z-index: 3999; 
 }

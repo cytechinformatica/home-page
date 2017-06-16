@@ -62,23 +62,25 @@ const __PORT_ITEMS = [
 
 $(() => {
     const portfolioItemsElement = $('.cy-cool-grid')
-    const portfolioItemTemplate = (item) => `
+    const portfolioItemTemplate = (item, i) => `
         <a href="${item.link ? item.link : ''}" class="cy-cool-grid-tile cy-cool-grid-tile-${item.size}" ${item.image ? `data-image="${item.image}"` : '' }>
             <div class="cy-cool-grid-tile-background">
                 ${item.imageHTML ? item.imageHTML : ''}
             </div>
             <div class="cy-cool-grid-tile-overlay">
-                <h1>portfolio item title</h1>
-                <p>portfolio item text</p>
+                <p translate>portfolio_item_${i}_title</p>
+                <p translate>portfolio_item_${i}_text</p>
             </div>
         </a>
     `
 
-    __PORT_ITEMS.map(item => portfolioItemsElement.append(portfolioItemTemplate(item)))
+    __PORT_ITEMS.map((item, i) => portfolioItemsElement.append(portfolioItemTemplate(item, i)))
 
     $('.cy-cool-grid-tile').each((_, el) => {
         $(el).css({
             background: `url(${$(el).data('image')}) center/cover`
         })
     })
+
+    window.__updateTranslation? window.__updateTranslation() : false
 })

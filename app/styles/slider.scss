@@ -1,3 +1,4 @@
+@import 'global';
 
 $def-height: calc(100vh - 52px);
 $def-box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12), 0 3px 1px -2px rgba(0,0,0,0.2);
@@ -9,7 +10,14 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     transition: all 2s $def-easing;
     background-color: #1A237E;
     background: url(../images/header-bg.png) center / cover;
-    z-index: 2000;
+    z-index: 3100;
+
+    @include responsive(
+        margin-top, 
+        80px, 
+        80px,
+        0
+    );
 
     .cy-slider-circle-wrapper {
         position: absolute;
@@ -124,6 +132,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         transform: translateX(-50%) scale(1.0);
         z-index: 10;
         transition: all 500ms $def-easing;
+        z-index: 4000;
 
         &.cy-hided {
             transform: translateX(-50%) scale(0.0);

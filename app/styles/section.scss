@@ -6,6 +6,9 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 
 .cy-section {
     min-height: $def-height;
+    @include responsive(
+        padding, 0 10px, 0 20px, 0 40px
+    );
 
     .cy-section-group {
         display: flex;
@@ -20,6 +23,12 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
             align-items: center;
             justify-content: center;
             flex-direction: column;
+
+            img {
+                @include responsive(
+                    width, 192px, 220px, 300px
+                )
+            }
         }
     }
 
@@ -40,7 +49,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     }
 
     .cy-section-title {
-        @include responsive (font-size, 24px, 28px, 32px);
+        @include responsive (font-size, 18px, 24px, 32px);
         font-weight: 900;
         text-transform: uppercase;
         margin: 5px 20px;
@@ -49,7 +58,6 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     .cy-section-text {
         @include responsive (font-size, 14px, 15px, 16px);
         font-weight: 500;
-        text-transform: uppercase;
         margin: 5px 20px;
     }
 
@@ -69,6 +77,8 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
     display: flex;
     justify-content: space-around;
 
-    font-size: 16px;
+    @include responsive(
+        font-size, 8px, 12px, 16px 
+    );
     font-weight: 300;
 }
