@@ -8,6 +8,11 @@ $def-phone-device-size: #{$def-phone-size}px;
 $def-box-shadow: 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12), 0 2px 4px -1px rgba(0,0,0,0.3);
 $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 
+.cy-device-wrapper {
+    width: $def-imac-device-size;
+    height: $def-imac-device-size;
+}
+
 .cy-device-imac {
     position: relative;
     width: $def-imac-device-size;

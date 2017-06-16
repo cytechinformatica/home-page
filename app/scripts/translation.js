@@ -1,11 +1,6 @@
 $(() => {
 
-    const _cy_tr = _cy_translations || {}
-    $.getJSON('https://cytech-home-page.firebaseio.com/public/content/translations.json', (data) => {
-
-        if(data)
-            $.extend(_cy_tr, data)
-
+    const initTranslation = _cy_tr => {
         if (_cy_tr) {
             const _m = window.location.href.match(/\:\/\/[\w\.]+\/(\w+)\/?$/)
             const _ul = _m ? _m[1] : null
@@ -34,6 +29,16 @@ $(() => {
                 })
             }
             window.__updateTranslation? window.__updateTranslation() : false
+        }
+    }
+
+    const _cy_tr = _cy_translations || {}
+    initTranslation(_cy_tr)
+
+    $.getJSON('https://cytech-home-page.firebaseio.com/public/content/translations.json', (data) => {
+        if(data) {
+            $.extend(_cy_tr, data)
+            initTranslation(_cy_tr)
         }
     })
 })

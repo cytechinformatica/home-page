@@ -6,7 +6,8 @@ $(() => {
         const state = {
             slide: -1,
             slides: [],
-            markers: []
+            markers: [], 
+            autoChange: true
         }
 
         /**
@@ -30,6 +31,7 @@ $(() => {
             }</div>`.replace(/,/g, '')
         ))
         slider.find('.cy-slider-marker').click((el) => {
+            state.autoChange = false
             goToSlide($(el.target).data('slide'))
         })
 
@@ -119,7 +121,11 @@ $(() => {
 
         goToSlide(0)
 
-        // setInterval(nextSlide, 4000)
+
+        setInterval(() => { 
+            if(state.autoChange)
+                nextSlide() 
+        }, 7000)
 
     })
 

@@ -32,6 +32,9 @@ $(() => {
     })
 
     $('.button-collapse').sideNav();
+    $('.side-nav').click(() => {
+        $('.button-collapse').sideNav('hide');
+    })
 
     window.__updateTranslation? window.__updateTranslation() : false
 

@@ -41,6 +41,12 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
 	align-items: center;
 	justify-content: center;
 
+	&.cy-logo-no-animate {
+		& * {
+			animation-name: none !important;
+		}
+	}
+
 	.cy-logo-circle-1 {
 		width: calc(#{$def-icon-size} - #{$def-unit-size} * 4);
 		height: calc(#{$def-icon-size} - #{$def-unit-size} * 4);

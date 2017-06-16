@@ -77,9 +77,10 @@ $(() => {
     __PORT_ITEMS.map((item, i) => portfolioItemsElement.append(portfolioItemTemplate(item, i)))
 
     $('.cy-cool-grid-tile').each((_, el) => {
-        $(el).css({
-            background: `url(${$(el).data('image')}) center/cover`
-        })
+        if($(el).data('image'))
+            $(el).css({
+                background: `url(${$(el).data('image')}) center/cover`
+            })
     })
 
     window.__updateTranslation? window.__updateTranslation() : false
