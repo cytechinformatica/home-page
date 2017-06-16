@@ -112,7 +112,7 @@ $def-easing: cubic-bezier(0.8, 0, 0.2, 1);
         }
 
         .cy-slide-strong-text {
-            font-size: 24px;
+            @include responsive(font-size, 14px, 20px, 24px);
             font-weight: 900;
             margin: 5px 80px !important;
             text-transform: uppercase;
