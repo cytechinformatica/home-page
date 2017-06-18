@@ -4,7 +4,7 @@ $(() => {
         if (_cy_tr) {
             const _m = window.location.href.match(/\:\/\/[\w\.]+\/(\w+)\/?/)
             const _ul = _m ? _m[1] : null
-            const l = (_ul || navigator.language || navigator.userLanguage || 'en').substr(0, 2)
+            const l = (_ul || navigator.language || navigator.userLanguage || 'pt').substr(0, 2)
 
             locale.init(l)
 
@@ -42,7 +42,6 @@ $(() => {
             const _cy_tr_new = {}
             $.extend(_cy_tr_new, data)
             initTranslation(data)
-            console.log(data)
         }
     })
 })
